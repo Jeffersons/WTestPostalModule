@@ -2,7 +2,14 @@ use_frameworks!
 
 platform :ios, '11.0'
 
+def externalLibs
+  pod 'Alamofire', '~> 5.4'
+  pod 'CSV.swift', '~> 2.4.3'
+end
+
 target 'WTestPostalModule_Example' do
+  externalLibs
+  
   pod 'WTestPostalModule', :path => '../'
   pod 'WTestToolKit', :git => 'git@github.com:Jeffersons/WTestToolKit.git', branch: 'develop'
   pod 'WTestPostalModule', :path => '../', :testspecs => ['Tests']

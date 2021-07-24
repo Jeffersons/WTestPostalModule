@@ -30,4 +30,6 @@ Pod::Spec.new do |s|
   s.resource = 'WTestPostalModule/Resources/**/*.{xcassets,xib}'
   s.dependency 'WTestToolKit'
   s.dependency 'SnapKit', '~> 5.0'
+  s.dependency 'Alamofire', '~> 5.4'
+  s.dependency 'CSV.swift', '~> 2.4.3'
 end
