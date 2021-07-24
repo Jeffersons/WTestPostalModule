@@ -1,0 +1,15 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'WTestPostalModule_Example' do
+  pod 'WTestPostalModule', :path => '../'
+
+  pod 'WTestPostalModule', :path => '../', :testspecs => ['Tests']
+
+  target 'WTestPostalModule_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase' , '~> 2.1.4'
+  end
+end
