@@ -1,6 +1,6 @@
 import XCTest
 
-class SampleInteractorTest: XCTestCase {
+class PostalCodeInteractorTest: XCTestCase {
     override func setUp() {}
     
     override func tearDown() {}
