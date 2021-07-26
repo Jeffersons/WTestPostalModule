@@ -2,6 +2,8 @@ import WTestToolKit
 
 protocol PostalCodePresentationLogic {
     func presentPostalCodes(response: [PostalCodeViewModel])
+    func presentProgressStatus(response: CGFloat)
+    func presentUpdateZipCodeIndexed(response: String)
 }
 
 final class PostalCodePresenter {
@@ -9,6 +11,14 @@ final class PostalCodePresenter {
 }
 
 extension PostalCodePresenter: PostalCodePresentationLogic {
+    func presentUpdateZipCodeIndexed(response: String) {
+        viewController?.displayUpdateZipCodeIndexed(with: response)
+    }
+    
+    func presentProgressStatus(response: CGFloat) {
+        viewController?.displayUpdateProgressBar(with: response)
+    }
+    
     func presentPostalCodes(response: [PostalCodeViewModel]) {
         let viewModel = transform(with: response)
         viewController?.displayPostalCodeList(with: viewModel)

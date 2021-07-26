@@ -1,14 +1,16 @@
-use_frameworks!
+source 'https://github.com/CocoaPods/Specs.git'
 
+use_frameworks!
 platform :ios, '11.0'
 
-def externalLibs
+def external_libs
   pod 'Alamofire', '~> 5.4'
   pod 'CSV.swift', '~> 2.4.3'
+  pod 'RealmSwift', '~> 10.5.2'
 end
 
 target 'WTestPostalModule_Example' do
-  externalLibs
+  external_libs
   
   pod 'WTestPostalModule', :path => '../'
   pod 'WTestToolKit', :git => 'git@github.com:Jeffersons/WTestToolKit.git', branch: 'develop'

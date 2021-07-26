@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'WTestPostalModule'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A short description of WTestPostalModule.'
 
   s.description      = <<-DESC
@@ -32,4 +32,5 @@ Pod::Spec.new do |s|
   s.dependency 'SnapKit', '~> 5.0'
   s.dependency 'Alamofire', '~> 5.4'
   s.dependency 'CSV.swift', '~> 2.4.3'
+  s.dependency 'RealmSwift', '~> 10.5.2'
 end

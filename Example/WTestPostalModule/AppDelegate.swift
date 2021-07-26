@@ -16,8 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let controller = Router.rootViewController()
+        let navigationController = UINavigationController(rootViewController: controller)
+        navigationController.setNavigationBarHidden(true, animated: false)
+        navigationController.navigationBar.isTranslucent = true
+        navigationController.navigationBar.tintColor = .gray
+        
+        UINavigationBar.appearance().largeTitleTextAttributes =
+            [NSAttributedString.Key.foregroundColor:UIColor.white,
+             NSAttributedString.Key.font:UIFont.boldSystemFont(ofSize: 22)]
 
-        window?.rootViewController = controller
+        window?.rootViewController = navigationController
         return true
     }
 }
